@@ -8,17 +8,17 @@ logging:
 
 seata:
   config:
-    type: file
+    type: nacos
     apollo:
       appId: seata-server
       apolloMeta: http://localhost:8801
       namespace: application
     nacos:
-      serverAddr: 127.0.0.1:8848
+      serverAddr: 10.1.60.225:8848
       namespace:
-      group: SEATA_GROUP
-      username:
-      password:
+      group: DW
+      username: nacos
+      password: nacos
     consul:
       serverAddr: 127.0.0.1:8500
     zk:
@@ -32,7 +32,7 @@ seata:
     file:
       name: file.conf
   registry:
-    type: file
+    type: nacos
     zk:
       cluster: default
       serverAddr: 127.0.0.1:2181
@@ -41,13 +41,13 @@ seata:
       username: ""
       password: ""
     nacos:
-      application:
-      serverAddr: 127.0.0.1:8848
-      group: SEATA_GROUP
+      application: dw-seata-server
+      serverAddr: 10.1.60.225:8848
+      group: DW
       namespace:
       cluster: default
-      username:
-      password:
+      username: nacos
+      password: nacos
     eureka:
       serviceUrl: http://localhost:8761/eureka
       application: default

@@ -38,27 +38,39 @@
     </licenses>
     <developers>
         <developer>
-            <id>Seata</id>
-            <name>Seata</name>
-            <url>http://seata.io</url>
+            <id>taisenki</id>
+            <name>taisenki</name>
+            <url>https://github.com/taisenki</url>
+            <email>taisenki@163.com</email>
         </developer>
     </developers>
 
-    <organization>
-        <name>Seata</name>
-        <url>https://github.com/seata</url>
-    </organization>
-
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/seata/seata/issues</url>
+        <url>https://github.com/taisenki/seata/issues</url>
     </issueManagement>
 
     <scm>
-        <url>git@github.com:seata/seata.git</url>
-        <connection>scm:git@github.com:seata/seata.git</connection>
-        <developerConnection>scm:git@github.com:seata/seata.git</developerConnection>
+        <connection>scm:git:https://github.com/taisenki/seata.git</connection>
+        <url>scm:git:https://github.com/taisenki/seata.git</url>
+        <developerConnection>scm:git:https://github.com/taisenki/seata.git</developerConnection>
+        <tag>boot-server</tag>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>user-release</id>
+            <name>User Project Release</name>
+            <url>http://10.1.60.207:8081/repository/maven-releases/</url>
+            <!-- 是否增加时间戳 -->
+            <uniqueVersion>false</uniqueVersion>
+        </repository>
+        <snapshotRepository>
+            <id>user-snapshots</id>
+            <name>User Project SNAPSHOTS</name>
+            <url>http://10.1.60.207:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <properties>
         <spring.version>4.3.23.RELEASE</spring.version>
@@ -608,17 +620,6 @@
                     </plugin>
                 </plugins>
             </build>
-
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>oss_seata</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-                </snapshotRepository>
-                <repository>
-                    <id>oss_seata</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-            </distributionManagement>
 
         </profile>
     </profiles>
